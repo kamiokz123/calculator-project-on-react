@@ -15,6 +15,7 @@ function App() {
 
 
   function handleNumber(value){
+
     let newValue=value;
 
     if (!cal.isinit) {
@@ -27,7 +28,7 @@ function App() {
     let total1=calculation();
 
     setCal({
-      num:total1.toString(),
+      num:"0",
       total:total1.toString(),
       isinit:true,
       oprt:value
@@ -47,7 +48,6 @@ function App() {
 
   function calculation() {
     let total=parseInt(cal.total);
-    console.log(cal);
 
     switch (cal.oprt) {
       case "+":
@@ -69,13 +69,17 @@ function App() {
     }
     return total;
   }
+  
 
   function render_display(){
     return cal.num;
   }
   return (
     <div className='app-container'>
-      <div className="display">{render_display()}</div>
+      <div className="display">{render_display()}
+      <div className='total'>Result : {cal.total}
+      </div>
+      </div>
       
       <Button  value="9" onClick={handleNumber}/>
       <Button value="8" onClick={handleNumber}/>
