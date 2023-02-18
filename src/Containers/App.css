@@ -6,10 +6,22 @@
 }
 
 button{
-    width: 80px;
-    height: 60px;
+    /* width: 80px;
+    height: 60px; */
+    cursor: pointer;
     border: 1px solid grey;
     background-color: aliceblue;
+}
+
+button:hover {background-color: #357e376c}
+button:active {
+    background-color: #3e8e4171;
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    -o-transform: translateY(1px);
 }
 .btn{
     width: 70px;
@@ -18,15 +30,29 @@ button{
     background-color: gray;
     font-size: 25px;
 }
+.btn:hover {background-color: #7cc37e62}
+.btn:active {
+    background-color: #3e8e4171;
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    -moz-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    -o-transform: translateY(1px);
+}
 
 .display{
     border: 1px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
     grid-column-start: 1;
     grid-column-end: 5;
-    height: 60px;
+    height: 85px;
     text-align:right;
     padding-right: 10px;
     padding-top: 10px;
     font-size: 20px;
+    background-color: #477a4831;
 
 }
